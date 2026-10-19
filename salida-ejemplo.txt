@@ -1,0 +1,47 @@
+INFO Procesando texto (129 caracteres)...
+INFO HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO Validación OK — criticidad=baja, 3 tecnologías detectadas.
+INFO Procesando texto (212 caracteres)...
+INFO HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO Validación OK — criticidad=alta, 2 tecnologías detectadas.
+INFO Procesando texto (78 caracteres)...
+INFO HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 503 Service Unavailable"
+INFO Retrying request in 0.496269 seconds (retry 1 of 2)
+INFO HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/openai/chat/completions "HTTP/1.1 200 OK"
+INFO Validación OK — criticidad=baja, 1 tecnologías detectadas.
+
+====================================================================
+Caso 1
+====================================================================
+{
+  "tecnologias": [
+    "Flask",
+    "FastAPI",
+    "Redis"
+  ],
+  "nivel_de_criticidad": "baja",
+  "resumen_tecnico": "Se migró con éxito el servicio de autenticación de Flask a FastAPI y se integró Redis como caché de sesiones sin registrar incidentes."
+}
+
+====================================================================
+Caso 2
+====================================================================
+{
+  "tecnologias": [
+    "PostgreSQL",
+    "Kubernetes"
+  ],
+  "nivel_de_criticidad": "alta",
+  "resumen_tecnico": "El pod primario de PostgreSQL se encuentra en CrashLoopBackOff desde hace 40 minutos, lo que causa fallos de conexión en las escrituras mientras las réplicas siguen atendiendo la lectura."
+}
+
+====================================================================
+Prueba de estrés (texto ambiguo)
+====================================================================
+{
+  "tecnologias": [
+    "Sistema general"
+  ],
+  "nivel_de_criticidad": "baja",
+  "resumen_tecnico": "El sistema presentó una degradación temporal de rendimiento que se resolvió automáticamente sin intervención técnica."
+}
